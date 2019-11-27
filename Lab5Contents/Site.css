@@ -1,0 +1,91 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    margin-bottom: 60px;
+    padding: 50px;
+}
+.error {
+    color:red;
+    font-weight: 600;
+}
+input[type="submit"], input[type="reset"] {
+    cursor: pointer;
+    color: #fff;
+    background-color: hsl(224, 53%, 42%);
+    border-color: hsl(212, 57%, 44%);
+    font-weight: 600;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 10px 10px 0 0;
+    border-style: outset;
+    border-width: 5px;
+}
+input[type="checkbox"] {
+    margin-top: 5px;
+}
+input[type="text"], input[type="tel"], input[type="number"] {
+    border-radius: 5px;
+    padding: 1px 0 0 3px;
+    height: 30px;
+}
+.greyBorder p {
+    border: 2px solid #cacaca;
+    padding: 10px;
+    margin: -2px 0;
+}
+form {
+    margin: 30px 0;
+}
+.name {
+    color:blue;
+    font-weight:600;
+    margin: 0;
+}
+td, th {
+    padding: 5px 50px 5px 5px;
+}
+th {
+    font-weight:600;
+}
+tr:nth-child(2n-1) {
+    background-color:hsl(240, 100%, 96%);
+}
+label {
+    display:inline-block;
+    min-width:150px;
+    height: 30px;
+    margin-bottom: 0;
+}
+input {
+    border-radius: 5px;
+    padding: 1px 0 0 3px;
+}
+div:nth-last-of-type(1) {
+    border:none;
+}
+div.checkboxLabels label {
+    display:inline;
+    margin-right: 10px;
+}
+span {
+    display:inline-block;
+    margin: 10px 20px 10px 0;
+}
+div label span {
+    display: block;
+    margin: 0;
+    font-weight: 400;
+}
+div span {
+    font-weight: 600;
+}
+@media only screen and (min-width: 430px) {
+    #phoneNumber {
+        position: relative;
+        bottom: 14px;
+    }
+}
