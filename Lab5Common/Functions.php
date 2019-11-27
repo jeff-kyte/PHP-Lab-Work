@@ -219,7 +219,7 @@ function getRegisteredCourses($studentId) {
 }
 // Return table row for sum of hours on Current Registration page
 function totalHoursRow($hours) {
-    return "<tr><td colspan=\"4\"></td><td><strong>Total Weekly Hours</strong></td><td>{$hours}</td><td></td></tr>";
+    return "<tr><td colspan=\"5\" class=\"summaryRow\"><strong>Total Weekly Hours</strong></td><td>{$hours}</td><td></td></tr>";
 }
 // Remove Registration entities for given student and courses
 function unregisterCourses($studentId, $courses) {

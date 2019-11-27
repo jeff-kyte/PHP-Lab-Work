@@ -40,7 +40,8 @@
                     $semesterTerm = "";
                     foreach($registeredCourses as $course) {
                         if ($semesterTerm != "" && $semesterTerm != $course['Term']) {
-                            print totalHoursRow($semesterHours);
+                            // Print sum of hours for semester
+                            print "<tr><td colspan=\"5\" class=\"summaryRow\"><strong>Total Weekly Hours</strong></td><td>{$semesterHours}</td><td></td></tr>";
                             $semesterHours = 0;
                         }
                         $semesterTerm = $course['Term'];
@@ -57,7 +58,8 @@
                 <?php
                         $semesterHours += $course['Hours'];
                     }
-                    print totalHoursRow($semesterHours);
+                    // Print sum of hours for semester
+                    print "<tr><td colspan=\"5\" class=\"summaryRow\"><strong>Total Weekly Hours</strong></td><td>{$semesterHours}</td><td></td></tr>";
                 ?>
             </table>
             <input type="submit" value="Delete Selected" name="btnSubmit" />
