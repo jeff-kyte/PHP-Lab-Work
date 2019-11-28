@@ -7,6 +7,6 @@
             </p>
         </div>
     </footer>
-<script src="/Lab5/Lab5Scripts/Site.js" type="text/javascript"></script>
-<script src="/AlgCommon/Scripts/jquery-2.2.4.min.js" type="text/javascript"></script>
-<script src="/AlgCommon/Contents/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="/Lab5/Lab5Scripts/Site.js"></script>
+<script src="/AlgCommon/Scripts/jquery-2.2.4.min.js"></script>
+<script src="/AlgCommon/Contents/js/bootstrap.min.js"></script>

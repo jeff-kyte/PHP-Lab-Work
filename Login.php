@@ -19,9 +19,6 @@
                 exit();
             }
         }
-        
-    } else if (isset($_POST["clear"])) {
-        $clearPage = true;
     }
 ?>
 <!DOCTYPE html>
@@ -53,7 +50,7 @@ LoginError;
                 <label for="StudentId">Student ID:</label>
                 <input type="text" id="studentId" name="studentId"
                        value="<?php
-                            if (!$clearPage && isset($studentId)) {
+                            if (isset($studentId)) {
                                 print $studentId;
                             }?>" />
                 <span class="error">
@@ -67,7 +64,7 @@ LoginError;
                 <label for="password">Password:</label>
                 <input id="password" type="password" name="password"
                        value="<?php
-                            if (!$clearPage && isset($password)) {
+                            if (isset($password)) {
                                 print $password;
                             }?>" />
                 <span class="error">
@@ -79,7 +76,7 @@ LoginError;
                 </span>
                 <br />
                 <input type="submit" value="Submit" name="submit"/>
-                <input type="submit" value="Clear"name="clear"/>
+                <input type="reset" value="Clear"name="clear"/>
             </div>
         </form>
         

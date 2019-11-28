@@ -24,8 +24,6 @@
             header("Location: CourseSelection.php");
             exit();
         }
-    } else if (isset($_POST["clear"])) {
-        $clearPage = true;
     }
 ?><!DOCTYPE html>
 <html lang="en">
@@ -44,10 +42,10 @@
         <p>All fields are required.</p>
         <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
             <div class="inputGroup">
-                <label for="StudentId">Student ID:</label>
+                <label for="studentId">Student ID:</label>
                 <input type="text" id="studentId" name="studentId"
                        value="<?php
-                            if (!$clearPage && isset($studentId)) {
+                            if (isset($studentId)) {
                                 print $studentId;
                             }?>" />
                 <span class="error">
@@ -59,10 +57,10 @@
                 </span>
             </div>
             <div class="inputGroup">
-                <label for="Name">Name:</label>
+                <label for="name">Name:</label>
                 <input type="text" id="name" name="name"
                        value="<?php
-                            if (!$clearPage && isset($name)) {
+                            if (isset($name)) {
                                 print $name;
                             }?>" />
                 <span class="error">
@@ -77,7 +75,7 @@
                 <label for="phoneNumber">Phone Number:<span>(nnn-nnn-nnnn)</span></label>
                 <input id="phoneNumber" type="tel" name="phoneNumber"
                        value="<?php
-                            if (!$clearPage && isset($phoneNumber)) {
+                            if (isset($phoneNumber)) {
                                 print $phoneNumber;
                             }?>" />
                 <span class="error">
@@ -92,7 +90,7 @@
                 <label for="password">Password:</label>
                 <input id="password" type="password" name="password"
                        value="<?php
-                            if (!$clearPage && isset($password)) {
+                            if (isset($password)) {
                                 print $password;
                             }?>" />
                 <span class="error">
@@ -107,7 +105,7 @@
                 <label for="passwordAgain">Password Again:</label>
                 <input id="passwordAgain" type="password" name="passwordAgain"
                        value="<?php
-                            if (!$clearPage && isset($passwordAgain)) {
+                            if (isset($passwordAgain)) {
                                 print $passwordAgain;
                             }?>" />
                 <span class="error">
@@ -119,7 +117,7 @@
                 </span>
             </div>
             <input type="submit" value="Submit" name="submit"/>
-            <input type="submit" value="Clear"name="clear"/>
+            <input type="reset" value="Clear" name="clear" id="reset"/>
         </form>
         <?php include('./Lab5Common/Footer.php'); ?>
     </body>
